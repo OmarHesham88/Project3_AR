@@ -136,11 +136,22 @@ $(document).on("click", function (event) {
 
 const modal = document.getElementById("myModal");
 const closeBtn = document.querySelector(".close");
+const modalImage = document.querySelector(".modal-image");
 
+// Wait for image to fully load before showing modal
 window.onload = () => {
-  modal.style.display = "flex";
+  if (modalImage.complete) {
+    showModal();
+  } else {
+    modalImage.onload = showModal;
+  }
 };
 
+function showModal() {
+  modal.style.display = "flex";
+}
+
+// Close logic
 closeBtn.onclick = () => {
   modal.style.display = "none";
 };
