@@ -143,6 +143,14 @@ body {
   box-sizing: border-box;
   animation: fadeIn 0.4s ease forwards;
 }
+.modal {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.modal.show {
+  opacity: 1;
+}
 
 /* Image container with relative positioning */
 .modal-image-container {
