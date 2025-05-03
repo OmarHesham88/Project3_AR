@@ -400,6 +400,71 @@ a.site-language:hover {
   border: 2px solid #fff;
 }
 
+
+
+.new-details-home.full {
+  width: 100%; /* full width now */
+  background: var(--solid);
+  padding: 15px 10px;
+  border-radius: 10px;
+  min-height: auto;
+  margin: 0;
+  text-align: center;
+}
+
+.new-banner-home {
+  width: 100%;
+  height: 230px;
+  margin-top: 10px;
+}
+
+.new-banner-home img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-info-home {
+  color: #fff;
+  background-image: url(../images/program-frame.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Medium screens: 2 items per row */
+@media (max-width: 991.98px) {
+  .single-new-home {
+    width: calc(50% - 20px);
+    margin-left: 20px;
+  }
+}
+
+/* Small screens: 1 item per row */
+@media (max-width: 767.98px) {
+  .single-new-home {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .new-details-home.full {
+    padding: 10px;
+  }
+
+  .new-info-home {
+    font-size: 14px;
+    height: 34px;
+  }
+}
+
 .bos-word {
   margin-bottom: 10px;
 }
