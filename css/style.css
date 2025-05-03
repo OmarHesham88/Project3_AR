@@ -125,7 +125,8 @@ body {
   background-image: url(../images/main-banner.png);
   background-position: left;
   color: var(--default);
-} /* Fade-in animation */
+}
+
 /* Modal overlay */
 .modal {
   display: none;
@@ -147,13 +148,11 @@ body {
   opacity: 1;
 }
 
-/* Image container with relative positioning */
 .modal-image-container {
   position: relative;
   display: inline-block;
   max-width: 500px;
   width: 100%;
-  /* transform: translateX(50%); */
 }
 
 /* The actual image */
@@ -168,7 +167,6 @@ body {
   transform: scale(1.01);
 }
 
-/* Close button inside image container */
 .close {
   position: absolute;
   top: 10px;

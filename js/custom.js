@@ -138,7 +138,6 @@ const modal = document.getElementById("myModal");
 const closeBtn = document.querySelector(".close");
 const modalImage = document.querySelector(".modal-image");
 
-// Wait until the image is fully loaded
 window.onload = () => {
   if (modalImage.complete) {
     showModal();
@@ -148,16 +147,13 @@ window.onload = () => {
 };
 
 function showModal() {
-  // Delay to allow image to render cleanly (especially on Android)
   setTimeout(() => {
     modal.classList.add("show");
-  }, 300); // 300ms delay to avoid blink/reposition
+  }, 300);
 }
 
-// Close on X
 closeBtn.onclick = () => modal.classList.remove("show");
 
-// Close when clicking outside
 window.onclick = (event) => {
   if (event.target === modal) modal.classList.remove("show");
 };
