@@ -136,21 +136,28 @@ $(document).on("click", function (event) {
 
 const modal = document.getElementById("myModal");
 const closeBtn = document.querySelector(".close");
+const modalImage = document.querySelector(".modal-image");
 
-// Delay modal appearance for 1 second
+// Wait until the image is fully loaded
 window.onload = () => {
+  if (modalImage.complete) {
+    showModal();
+  } else {
+    modalImage.onload = showModal;
+  }
+};
+
+function showModal() {
+  // Delay to allow image to render cleanly (especially on Android)
   setTimeout(() => {
-    modal.style.display = "flex";
-    setTimeout(() => modal.classList.add("show"), 50); // trigger fade-in
-  }, 1000);
-};
+    modal.classList.add("show");
+  }, 300); // 300ms delay to avoid blink/reposition
+}
 
-// Close modal on 'X'
-closeBtn.onclick = () => {
-  modal.style.display = "none";
-};
+// Close on X
+closeBtn.onclick = () => modal.classList.remove("show");
 
-// Close modal on outside click
+// Close when clicking outside
 window.onclick = (event) => {
-  if (event.target === modal) modal.style.display = "none";
+  if (event.target === modal) modal.classList.remove("show");
 };
