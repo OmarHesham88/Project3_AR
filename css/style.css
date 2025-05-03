@@ -1054,6 +1054,13 @@ footer .col-lg-4:first-of-type p {
   min-height: 150px;
   margin: 20px 0;
 }
+.news-date {
+  display: block;
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 5px;
+}
+
 .new-details h5 {
   font-size: 17px;
 }
