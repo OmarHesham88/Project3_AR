@@ -414,7 +414,7 @@ a.site-language:hover {
 
 .new-banner-home {
   width: 100%;
-  height: 230px;
+  height: 180px;
   margin-top: 10px;
 }
 
@@ -465,6 +465,10 @@ a.site-language:hover {
   }
 }
 .new-link-home{
+  text-decoration: none;
+  color: #fff;
+}
+.new-link-home:hover{
   text-decoration: none;
   color: #fff;
 }
