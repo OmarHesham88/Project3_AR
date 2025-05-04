@@ -464,7 +464,10 @@ a.site-language:hover {
     height: 34px;
   }
 }
-
+.new-link-home{
+  text-decoration: none;
+  color: #fff;
+}
 .bos-word {
   margin-bottom: 10px;
 }
